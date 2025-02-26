@@ -1,0 +1,296 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&subset=devanagari,latin-ext');
+
+
+body{
+  padding:0;
+  margin:0;
+  font-family: 'Poppins', sans-serif;
+}
+
+.layout {
+  position: absolute;
+  display: flex;
+  width: 98.8vw;
+  height: 97vh;
+  font-family: 'Poppins', sans-serif;
+}
+
+.layout-container{
+  position:relative;
+  overflow:hidden;
+background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+}
+
+.inspiration {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+}
+
+.left {
+display: flex;
+  flex-direction:column;
+  width: 25%;
+  height: 100%;
+  background-color: white;
+  color: #848697;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo svg {
+  width: 100px;
+  height: 100px;
+}
+
+.company {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-left: 10px;
+}
+
+.company-name {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.company-description {
+  font-size: 14px;
+  color: #555;
+}
+
+.navigation {
+  position: relative;
+  display: block;
+
+}
+
+.navigation li {
+  padding: 0 25px;
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.navigation li:hover {
+  color: #00bf72;
+  border: 2px solid #00bf72;
+  border-right: none;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.navigation li.logout:hover {
+  color: #d62d20;
+  border-color: #d62d20;
+}
+
+.navigation li i {
+  font-size: 20px;
+}
+
+.navigation li span {
+  padding-left: 10px;
+  vertical-align: super;
+}
+
+.right {
+  flex: 1 1 auto;
+  background-color: #f6f6fc;
+  padding: 30px;
+  border-radius: 0 3px 3px 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.right .title {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.right .description {
+  margin-top: 5px;
+  margin-bottom: 20px;
+  color: gray;
+}
+
+.right .row {
+  display: flex;
+  margin: 10px 0 40px;
+}
+
+.right .row:last-child {
+  margin: 10px 0 0;
+}
+
+.right .column {
+  flex-direction: column;
+}
+
+.right .graph {
+  display: inline-block;
+  width: 250px;
+  height: 150px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 22px -8px #808080;
+}
+
+.right .graph .stock {
+  margin: 0;
+  margin-left: 20px;
+  top: 5px;
+}
+
+.right .graph + .graph {
+  margin-left: 10px;
+}
+
+.right .asset-category {
+  display: flex;
+}
+
+.right .category {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.right .asset {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  margin: 10px 0;
+}
+
+.right .asset-logo {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex: 0;
+}
+
+.right .asset-logo:before {
+  content: '';
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  transform: rotate(45deg);
+  border-radius: 10px;
+}
+
+.right .asset-logo i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.right .asset-name {
+  color: gray;
+}
+
+.right .sub-title {
+  margin-bottom: 10px;
+  color: darkblue;
+}
+
+.right .half {
+  flex: 1;
+}
+
+.right .stock {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 40px;
+  padding: 5px 0;
+  margin: 8px 0;
+}
+
+.right .stock-logo {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex: 0;
+  margin-right: 10px;
+}
+
+.right .stock-logo:before {
+  content: '';
+  width: 30px;
+  height: 30px;
+  background-color: #555;
+  transform: rotate(45deg);
+  border-radius: 7px;
+}
+
+.right .stock-logo i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.right .stock-info {
+  margin-left: 5px;
+  flex: 1;
+}
+
+.right .stock-name {
+  color: darkblue;
+}
+
+.right .stock-fullname {
+  color: gray;
+}
+
+.right .stock-value {
+  flex: 1;
+  font-weight: bold;
+  color: gray;
+}
+
+.right .stock-logo.apple:before {
+  background: gray;
+}
+
+.right .stock-logo.facebook:before {
+  background: #3b5998;
+}
+
+.right .stock-logo.amazon:before {
+  background: #ff9b24;
+}
+
+.right .stock-logo.twitter:before {
+  background: #55acee;
+}
+
+.right .stock-logo.paypal:before {
+  background: #003087;
+}
+
+.right .stock-logo.google:before {
+  background: #d62d20;
+}
+
+.right .stock-logo.paperpillar:before {
+  background: linear-gradient(to top right, rgb(120, 113, 255), rgb(111, 234, 255));
+}
+
+.right .stock-logo.dandruft:before {
+  background: linear-gradient(to top right, rgb(248, 135, 129), rgb(247, 198, 130));
+}
