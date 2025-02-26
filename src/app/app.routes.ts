@@ -27,10 +27,11 @@ export const routes: Routes = [
         path: 'employee',
         component: EmployeeComponent
       },
-      {
-        path: 'project',
-        component: ProjectComponent
-      },
+      // {
+      //   path: 'project',
+      //   component: ProjectComponent
+      // },
+
     ]
   }
 ];
