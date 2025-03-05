@@ -20,29 +20,29 @@
       <ul>
         <li>
           <i class="material-icons">store</i>
-          <span>Home</span>
+          <a routerLink="/dashboard">Home</a>
         </li>
         <li>
           <i class="material-icons">track_changes</i>
-          <span>Explore</span>
+          <a>Explore</a>
         </li>
         <li>
           <i class="material-icons">badge</i>
-          <span>Employee</span>
+          <a routerLink="/employee">Employee</a>
         </li>
         <li>
           <i class="material-icons">forum</i>
-          <span>Message</span>
+          <a>Message</a>
         </li>
         <li>
           <i class="material-icons">library_books</i>
-          <span>News</span>
+          <a>News</a>
         </li>
         <!-- Début des modifications -->
         <hr class="divider">
         <li class="user-profile">
           <i class="material-icons">account_circle</i>
-          <span>John Doe</span>
+          <a>John Doe</a>
         </li>
         <li class="logout" (click)="onLogout()">
           <i class="material-icons">logout</i>
@@ -53,6 +53,7 @@
     </div>
   </div>
   <div class="right layout-container">
+    <router-outlet></router-outlet>
 
   </div>
 </div>

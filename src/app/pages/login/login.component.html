@@ -1,7 +1,9 @@
 <div class="vid-container">
   <div class="inner-container">
     <div class="box">
-      <h1>Welcome Back</h1>
+      <span>
+        <i class="material-icons login-icon">account_circle</i>
+      </span>
       <input type="text" placeholder="Username" [(ngModel)]="loginObj.username"/>
       <input type="password" placeholder="Password" [(ngModel)]="loginObj.password"/>
       <button (click)="onLogin()">Sign In</button>

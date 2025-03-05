@@ -104,6 +104,13 @@ display: flex;
   vertical-align: super;
 }
 
+.navigation li a {
+  padding-left: 10px;
+  vertical-align: super;
+  text-decoration: none;
+  color: inherit;
+}
+
 .right {
   flex: 1 1 auto;
   background-color: #f6f6fc;

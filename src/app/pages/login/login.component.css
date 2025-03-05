@@ -19,11 +19,12 @@ background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf
 }
 .inner-container{
   width:400px;
-  height:400px;
+  height:420px;
   position:absolute;
   top:calc(50vh - 200px);
   left:calc(50vw - 200px);
   overflow:hidden;
+  border-radius: 5px;
 }
 .bgvid.inner{
   top:calc(-50vh + 200px);
@@ -33,6 +34,7 @@ background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf
   -ms-filter: blur(10px);
   -o-filter: blur(10px);
   filter:blur(10px);
+
 }
 .box{
   position:absolute;
@@ -56,6 +58,8 @@ background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf
   background:rgba(0,0,0,0.2);
   color:#fff;
   border:0;
+  border-radius: 5px;
+  text-align: center;
 }
 .box input:focus,.box input:active,.box button:focus,.box button:active{
   outline:none;
@@ -67,7 +71,8 @@ background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf
   padding:10px;
   font-size:20px;
   width:330px;
-  margin:20px auto;
+  margin:30px auto;
+  border-radius: 5px;
   display:block;
   cursor:pointer;
 }
@@ -81,4 +86,10 @@ background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf
 .box p span{
   cursor:pointer;
   color:#666;
+}
+.login-icon{
+  font-size: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
