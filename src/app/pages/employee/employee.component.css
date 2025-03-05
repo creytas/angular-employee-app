@@ -1,0 +1,140 @@
+.form-container {
+  width: 40%;
+  height: 98%;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 0 25px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  position: relative;
+  background-color: #f1f1f1;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.input-group:focus-within {
+  border-color: #00bf72;
+  box-shadow: 0 0 5px rgba(0, 191, 114, 0.5);
+}
+
+/* STYLE GÉNÉRAL POUR LES CHAMPS (input et select) */
+.input-group {
+  position: relative;
+  background-color: #f1f1f1;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+/* Quand un champ (input/select) a le focus */
+.input-group:focus-within {
+  border-color: #00bf72;
+  box-shadow: 0 0 5px rgba(0, 191, 114, 0.5);
+}
+
+/* Style INPUT */
+.input-group input,
+.input-group select {
+  width: 100%;
+  padding: 10px 10px 10px 35px; /* Déplacer le texte à droite pour l'icône */
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  transition: 0.3s;
+  height: 40px;
+  box-sizing: border-box;
+}
+
+.input-group input:focus,
+.input-group select:focus {
+  outline: none;
+}
+
+/* Style spécifique pour SELECT dans gender-group */
+.gender-group .input-group select {
+  width: 100%; /* Assurer que le select prenne toute la largeur */
+  min-width: 378.4px; /* Largeur minimale pour s'assurer que le select ne devienne pas trop petit */
+  appearance: none; /* Supprimer l'apparence native du select */
+  background-color: white;
+  cursor: pointer;
+}
+
+/* Style pour l'icône dans le champ */
+.input-group-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px; /* Taille fixe pour l'icône */
+  height: 100%;
+  background-color: #f1f1f1;
+  border-right: 1px solid #ccc;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.input-group-text i {
+  font-size: 18px;
+  color: #333;
+}
+
+/* Pour faire de la place à l'icône dans l'input/select */
+.input-group input,
+.input-group select {
+  padding-left: 35px; /* Espace pour l'icône */
+}
+
+.submit-btn {
+  width: 100%;
+  margin-top: 20px;
+  padding: 12px;
+  background-color: #00bf72;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.submit-btn:hover {
+  background-color: #008f5a;
+}
+
+/* Style pour les icônes dans les champs */
+.input-group-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px; /* Taille fixe pour l'icône */
+  height: 100%;
+  background-color: #f1f1f1;
+  border-right: 1px solid #ccc;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.input-group-text i {
+  font-size: 18px;
+  color: #333;
+}
+
+.input-group select {
+  padding-left: 35px; /* Pour faire de la place à l'icône */
+}
+
+.input-group input:focus,
+.input-group select:focus {
+  outline: none;
+}
