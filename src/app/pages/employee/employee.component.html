@@ -1,57 +1,62 @@
-<div class="form-container">
-  <h2>Employee Registration</h2>
+<div class="employee-container">
+  <div class="table-container">
+    <h2>Employee 1</h2>
+  </div>
+  <div class="form-container">
+    <h2>Employee Registration</h2>
 
-  <form>
-    <!-- Employee Name -->
-    <div class="form-group input-group">
-      <span class="input-group-text"><i class="material-icons">person</i></span>
-      <input type="text" class="form-control" formControlName="employeeName" placeholder="Full Name">
-    </div>
+    <form>
+      <!-- Employee Name -->
+      <div class="form-group input-group">
+        <span class="input-group-text"><i class="material-icons">person</i></span>
+        <input type="text" class="form-control" formControlName="employeeName" placeholder="Full Name">
+      </div>
 
-    <!-- Contact Number -->
-    <div class="form-group input-group">
-      <span class="input-group-text"><i class="material-icons">phone</i></span>
-      <input type="text" class="form-control" formControlName="contactNo" placeholder="Phone Number">
-    </div>
+      <!-- Contact Number -->
+      <div class="form-group input-group">
+        <span class="input-group-text"><i class="material-icons">phone</i></span>
+        <input type="text" class="form-control" formControlName="contactNo" placeholder="Phone Number">
+      </div>
 
-    <!-- Email -->
-    <div class="form-group input-group">
-      <span class="input-group-text"><i class="material-icons">email</i></span>
-      <input type="email" class="form-control" formControlName="emailId" placeholder="Email">
-    </div>
+      <!-- Email -->
+      <div class="form-group input-group">
+        <span class="input-group-text"><i class="material-icons">email</i></span>
+        <input type="email" class="form-control" formControlName="emailId" placeholder="Email">
+      </div>
 
-    <!-- Password -->
-    <div class="form-group input-group">
-      <span class="input-group-text"><i class="material-icons">lock</i></span>
-      <input type="password" class="form-control" formControlName="password" placeholder="Password">
-    </div>
+      <!-- Password -->
+      <div class="form-group input-group">
+        <span class="input-group-text"><i class="material-icons">lock</i></span>
+        <input type="password" class="form-control" formControlName="password" placeholder="Password">
+      </div>
 
-    <!-- Gender -->
-    <div class="form-group gender-group input-group">
-      <span class="input-group-text"><i class="material-icons">accessibility</i></span>
-      <select class="form-select" formControlName="gender">
-        <option value="" disabled>Select Gender</option>
-        <option value="Male">Male</option>
-        <option value="Female">Female</option>
-        <option value="Other">Other</option>
-      </select>
-    </div>
+      <!-- Gender -->
+      <div class="form-group gender-group input-group">
+        <span class="input-group-text"><i class="material-icons">accessibility</i></span>
+        <select class="form-select" formControlName="gender">
+          <option value="" disabled>Select Gender</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
 
-    <!-- Department ID -->
-    <div class="form-group input-group">
-      <span class="input-group-text"><i class="material-icons">business</i></span>
-      <input type="number" class="form-control" formControlName="deptId" placeholder="Department ID">
-    </div>
+      <!-- Department ID -->
+      <div class="form-group input-group">
+        <span class="input-group-text"><i class="material-icons">business</i></span>
+        <input type="number" class="form-control" formControlName="deptId" placeholder="Department ID">
+      </div>
 
-    <!-- Role -->
-    <div class="form-group input-group">
-      <span class="input-group-text"><i class="material-icons">badge</i></span>
-      <input type="text" class="form-control" formControlName="role" placeholder="Role">
-    </div>
+      <!-- Role -->
+      <div class="form-group input-group">
+        <span class="input-group-text"><i class="material-icons">badge</i></span>
+        <input type="text" class="form-control" formControlName="role" placeholder="Role">
+      </div>
 
-    <!-- Submit Button -->
-    <button type="submit" class="submit-btn">
-      Submit
-    </button>
-  </form>
+      <!-- Submit Button -->
+      <button type="submit" class="submit-btn">
+        Submit
+      </button>
+    </form>
+  </div>
 </div>
