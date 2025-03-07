@@ -156,3 +156,104 @@
 .input-group select:focus {
   outline: none;
 }
+
+/* Style général de la table */
+.table-border{
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.gb-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  border-radius: 5px;
+  overflow: hidden;
+  border: 1px solid #ced4da
+}
+
+/* Style des en-têtes */
+.gb-table thead {
+  background-color: #f8f9fa;
+  font-weight: bold;
+  text-align: left;
+}
+
+.gb-table th {
+  padding: 6px 8px;
+  border-bottom: 2px solid #dee2e6;
+}
+
+/* Ajout des bordures horizontales uniquement */
+.gb-table tbody tr {
+  border-bottom: 1px solid #dee2e6;
+  transition: background-color 0.3s ease;
+}
+
+.gb-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+/* Style des cellules */
+.gb-table td {
+  padding: 6px 8px;
+  vertical-align: top;
+}
+
+/* Effet de survol */
+.gb-table tbody tr:hover {
+  background-color: #f1f3f5;
+}
+
+.column{
+  display: flex;
+  flex-direction: column;
+}
+
+.action-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4px;
+}
+
+.icon-admin {
+  color: #1565C0;
+  font-size: 30px;
+}
+
+.icon-employee {
+  color: #2E7D32;
+  font-size: 30px;
+}
+
+.icon-visitor {
+  color: #555;
+  font-size: 30px;
+}
+
+
+.icon-button {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.icon-button.view {
+  color: #4CAF50;
+}
+
+.icon-button.edit {
+  color: #FF9800;
+}
+
+.icon-button.delete {
+  color: #F44336;
+}
+
+.icon-button:hover {
+  opacity: 0.8;
+}

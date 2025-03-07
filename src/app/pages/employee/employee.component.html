@@ -1,6 +1,101 @@
 <div class="employee-container">
   <div class="table-container">
-    <h2>Employee 1</h2>
+    <h2>Employee List</h2>
+    <div class="table-border">
+      <table class="table gb-table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Gender</th>
+            <th scope="col">Department</th>
+            <th scope="col">Role</th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="gb-is-hover">
+            <td>9103</td>
+            <td>
+              <div class="column">
+                <b class="text-nowrap">Randy BUHENDWA</b>
+                <small class="d-block">randy.buhendwa&#64;gmail.com</small>
+              </div>
+            </td>
+            <td>Male</td>
+            <td><span class="text-nowrap">Development</span></td>
+            <td>
+              <i class="material-icons icon-admin">admin_panel_settings</i>
+            </td>
+            <td class="action-container">
+              <button class="icon-button view"><i class="material-icons">visibility</i></button>
+              <button class="icon-button edit"><i class="material-icons">edit</i></button>
+              <button class="icon-button delete"><i class="material-icons">delete</i></button>
+            </td>
+          </tr>
+
+          <tr class="gb-is-hover">
+            <td>1461</td>
+            <td>
+              <div class="column">
+                <b class="text-nowrap">Ada LOVELACE</b>
+                <small class="d-block">ada.lovelace&#64;gmail.com</small>
+              </div>
+            </td>
+            <td>Female</td>
+            <td><span class="text-nowrap">Marketing & Communication</span></td>
+            <td>
+              <i class="material-icons icon-employee">badge</i>
+            </td>
+            <td class="action-container">
+              <button class="icon-button view"><i class="material-icons">visibility</i></button>
+              <button class="icon-button edit"><i class="material-icons">edit</i></button>
+              <button class="icon-button delete"><i class="material-icons">delete</i></button>
+            </td>
+          </tr>
+
+          <tr class="gb-is-hover">
+            <td>2083</td>
+            <td>
+              <div class="column">
+                <b class="text-nowrap">Jean-Michel MASIKINI</b>
+                <small class="d-block">jm.masikini&#64;gmail.com</small>
+              </div>
+            </td>
+            <td>Male</td>
+            <td><span class="text-nowrap">Finance & Accounting</span></td>
+            <td>
+              <i class="material-icons icon-visitor">person</i>
+            </td>
+            <td class="action-container">
+              <button class="icon-button view"><i class="material-icons">visibility</i></button>
+              <button class="icon-button edit"><i class="material-icons">edit</i></button>
+              <button class="icon-button delete"><i class="material-icons">delete</i></button>
+            </td>
+          </tr>
+
+          <tr class="gb-is-hover">
+            <td>7777</td>
+            <td>
+              <div class="column">
+                <b class="text-nowrap">Wendy ASSANA</b>
+                <small class="d-block">alicia.assana&#64;gmail.com</small>
+              </div>
+            </td>
+            <td>Female</td>
+            <td><span class="text-nowrap">Sales</span></td>
+            <td>
+              <i class="material-icons icon-employee">badge</i>
+            </td>
+            <td class="action-container">
+              <button class="icon-button view"><i class="material-icons">visibility</i></button>
+              <button class="icon-button edit"><i class="material-icons">edit</i></button>
+              <button class="icon-button delete"><i class="material-icons">delete</i></button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
   <div class="form-container">
     <h2>Employee Registration</h2>
@@ -37,20 +132,37 @@
           <option value="" disabled>Select Gender</option>
           <option value="Male">Male</option>
           <option value="Female">Female</option>
-          <option value="Other">Other</option>
         </select>
       </div>
 
       <!-- Department ID -->
-      <div class="form-group input-group">
+      <div class="form-group gender-group input-group">
         <span class="input-group-text"><i class="material-icons">business</i></span>
-        <input type="number" class="form-control" formControlName="deptId" placeholder="Department ID">
+        <select class="form-select" formControlName="gender">
+          <option value="" disabled>Select Department</option>
+          <option value="DEV">Development</option>
+          <option value="QA"> Quality Assurance</option>
+          <option value="MANAGEMENT">Project & Product Management</option>
+          <option value="SECURITY">Security</option>
+          <option value="DATA">Data & Analytics</option>
+          <option value="CUSTOMER">Customer Service</option>
+          <option value="COM">Marketing & Communication</option>
+          <option value="SALES">Sales</option>
+          <option value="HR">Human Resources</option>
+          <option value="FIN">Finance & Accounting</option>
+          <option value="LEG">Legal</option>
+        </select>
       </div>
 
       <!-- Role -->
-      <div class="form-group input-group">
+      <div class="form-group gender-group input-group">
         <span class="input-group-text"><i class="material-icons">badge</i></span>
-        <input type="text" class="form-control" formControlName="role" placeholder="Role">
+        <select class="form-select" formControlName="gender">
+          <option value="" disabled>Select Role</option>
+          <option value="Admin">Admin</option>
+          <option value="Employee">Employee</option>
+          <option value="Visitor">Visitor</option>
+        </select>
       </div>
 
       <!-- Submit Button -->
