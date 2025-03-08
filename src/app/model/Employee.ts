@@ -31,3 +31,21 @@ export class Employee {
     this.createdDate = createdDate;
   }
 }
+
+export interface IApiResponse {
+  message: string;
+  result: boolean;
+  data: any;
+}
+
+export interface IDepartment {
+  departmentId: number;
+  departmentName: string;
+  departmentLogo: string;
+}
+
+export interface IDivision {
+  childDeptId: number,
+  parentDeptId: number,
+  departmentName: string
+}
