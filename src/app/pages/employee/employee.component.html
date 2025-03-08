@@ -1,6 +1,6 @@
 <div class="employee-container">
   <div class="table-container">
-    <h2 class="head-title"><div class="section-title"><i class="material-icons icon-title">badge</i><span>Employee List</span></div><div class="action-container"><button class="icon-button"><i class="material-icons icon-visitor">upload</i></button><button class="icon-button"><i class="material-icons icon-admin">person_add</i></button></div></h2>
+    <h2 class="head-title"><div class="section-title"><i class="material-icons icon-title">badge</i><span>Employee List</span></div><div class="action-container"><button class="icon-button" (click)="export()"><i class="material-icons icon-visitor">upload</i></button><button class="icon-button" (click)="add()"><i class="material-icons icon-admin">person_add</i></button></div></h2>
     <div class="table-border">
       <table class="table gb-table">
         <thead>
@@ -28,9 +28,9 @@
               <i class="material-icons icon-admin">admin_panel_settings</i>
             </td>
             <td class="action-container">
-              <button class="icon-button view"><i class="material-icons">visibility</i></button>
-              <button class="icon-button edit"><i class="material-icons">edit</i></button>
-              <button class="icon-button delete"><i class="material-icons">delete</i></button>
+              <button class="icon-button view" (click)="view()"><i class="material-icons">visibility</i></button>
+              <button class="icon-button edit" (click)="edit()"><i class="material-icons">edit</i></button>
+              <button class="icon-button delete" (click)="delete()"><i class="material-icons">delete</i></button>
             </td>
           </tr>
 
@@ -48,9 +48,9 @@
               <i class="material-icons icon-employee">badge</i>
             </td>
             <td class="action-container">
-              <button class="icon-button view"><i class="material-icons">visibility</i></button>
-              <button class="icon-button edit"><i class="material-icons">edit</i></button>
-              <button class="icon-button delete"><i class="material-icons">delete</i></button>
+              <button class="icon-button view" (click)="view()"><i class="material-icons">visibility</i></button>
+              <button class="icon-button edit" (click)="edit()"><i class="material-icons">edit</i></button>
+              <button class="icon-button delete" (click)="delete()"><i class="material-icons">delete</i></button>
             </td>
           </tr>
 
@@ -68,9 +68,9 @@
               <i class="material-icons icon-visitor">person</i>
             </td>
             <td class="action-container">
-              <button class="icon-button view"><i class="material-icons">visibility</i></button>
-              <button class="icon-button edit"><i class="material-icons">edit</i></button>
-              <button class="icon-button delete"><i class="material-icons">delete</i></button>
+              <button class="icon-button view" (click)="view()"><i class="material-icons">visibility</i></button>
+              <button class="icon-button edit" (click)="edit()"><i class="material-icons">edit</i></button>
+              <button class="icon-button delete" (click)="delete()"><i class="material-icons">delete</i></button>
             </td>
           </tr>
 
@@ -88,9 +88,9 @@
               <i class="material-icons icon-employee">badge</i>
             </td>
             <td class="action-container">
-              <button class="icon-button view"><i class="material-icons">visibility</i></button>
-              <button class="icon-button edit"><i class="material-icons">edit</i></button>
-              <button class="icon-button delete"><i class="material-icons">delete</i></button>
+              <button class="icon-button view" (click)="view()"><i class="material-icons">visibility</i></button>
+              <button class="icon-button edit" (click)="edit()"><i class="material-icons">edit</i></button>
+              <button class="icon-button delete" (click)="delete()"><i class="material-icons">delete</i></button>
             </td>
           </tr>
 
@@ -108,9 +108,9 @@
               <i class="material-icons icon-admin">admin_panel_settings</i>
             </td>
             <td class="action-container">
-              <button class="icon-button view"><i class="material-icons">visibility</i></button>
-              <button class="icon-button edit"><i class="material-icons">edit</i></button>
-              <button class="icon-button delete"><i class="material-icons">delete</i></button>
+              <button class="icon-button view" (click)="view()"><i class="material-icons">visibility</i></button>
+              <button class="icon-button edit" (click)="edit()"><i class="material-icons">edit</i></button>
+              <button class="icon-button delete" (click)="delete()"><i class="material-icons">delete</i></button>
             </td>
           </tr>
 
@@ -128,9 +128,9 @@
               <i class="material-icons icon-visitor">person</i>
             </td>
             <td class="action-container">
-              <button class="icon-button view"><i class="material-icons">visibility</i></button>
-              <button class="icon-button edit"><i class="material-icons">edit</i></button>
-              <button class="icon-button delete"><i class="material-icons">delete</i></button>
+              <button class="icon-button view" (click)="view()"><i class="material-icons">visibility</i></button>
+              <button class="icon-button edit" (click)="edit()"><i class="material-icons">edit</i></button>
+              <button class="icon-button delete" (click)="delete()"><i class="material-icons">delete</i></button>
             </td>
           </tr>
         </tbody>
@@ -139,19 +139,19 @@
             <td colspan="6">
               <div class="table-footer">
                 <nav class="pagination">
-                  <button class="icon-button" onclick="changePage('first')" aria-label="Première page">
+                  <button class="icon-button" (click)="changePage('first')" aria-label="Première page">
                     <i class="material-icons">first_page</i>
                   </button>
-                  <button class="icon-button" onclick="changePage('prev')" aria-label="Page précédente">
+                  <button class="icon-button" (click)="changePage('prev')" aria-label="Page précédente">
                     <i class="material-icons">chevron_left</i>
                   </button>
                   <span class="page-info">
                     Page <span id="current-page">1</span> - <span id="total-pages">1</span>
                   </span>
-                  <button class="icon-button" onclick="changePage('next')" aria-label="Page suivante">
+                  <button class="icon-button" (click)="changePage('next')" aria-label="Page suivante">
                     <i class="material-icons">chevron_right</i>
                   </button>
-                  <button class="icon-button" onclick="changePage('last')" aria-label="Dernière page">
+                  <button class="icon-button" (click)="changePage('last')" aria-label="Dernière page">
                     <i class="material-icons">last_page</i>
                   </button>
                 </nav>
@@ -177,7 +177,7 @@
     </div>
   </div>
   <div class="form-container">
-    <h2 class="head-title"><div class="section-title"><i class="material-icons icon-title">badge</i><span>Employee Registration</span></div><div class="action-container"><button class="icon-button"><i class="material-icons icon-visitor">close</i></button></div></h2>
+    <h2 class="head-title"><div class="section-title"><i class="material-icons icon-title">badge</i><span>Employee Registration</span></div><div class="action-container"><button class="icon-button" (click)="close()"><i class="material-icons icon-visitor">close</i></button></div></h2>
 
     <form>
       <!-- Employee Name -->
