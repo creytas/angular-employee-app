@@ -146,7 +146,7 @@
                     <i class="material-icons">chevron_left</i>
                   </button>
                   <span class="page-info">
-                    Page <span id="current-page">1</span> - <span id="total-pages">1</span>
+                    Page <span id="current-page">{{page}}</span> - <span id="total-pages">{{totalPages}}</span>
                   </span>
                   <button class="icon-button" (click)="changePage('next')" aria-label="Page suivante">
                     <i class="material-icons">chevron_right</i>
@@ -166,7 +166,7 @@
                 </div>
 
                 <div class="total-items">
-                  Total : <span id="total-items">6</span> items
+                  Total : <span id="total-items">{{employees.length}}</span> items
                 </div>
               </div>
             </td>
@@ -219,7 +219,10 @@
         <span class="input-group-text"><i class="material-icons">business</i></span>
         <select class="form-select" formControlName="gender">
           <option value="" disabled>Select Department</option>
-          <option value="DEV">Development</option>
+          @for (department of departments; track $index) {
+            <option [value]="department.departmentId">{{department.departmentName}}</option>
+          }
+          <!-- <option value="DEV">Development</option>
           <option value="QA"> Quality Assurance</option>
           <option value="MANAGEMENT">Project & Product Management</option>
           <option value="SECURITY">Security</option>
@@ -229,7 +232,7 @@
           <option value="SALES">Sales</option>
           <option value="HR">Human Resources</option>
           <option value="FIN">Finance & Accounting</option>
-          <option value="LEG">Legal</option>
+          <option value="LEG">Legal</option> -->
         </select>
       </div>
 

@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { IApiResponse } from '../model/Employee';
+import { Employee, IApiResponse } from '../model/Employee';
 
 @Injectable({
   providedIn: 'root'
@@ -13,6 +13,9 @@ export class MasterService {
 
   getDepartments(){
     return this.http.get<IApiResponse>('http://projectapi.gerasim.in/api/EmployeeManagement/GetParentDepartment');
+  }
+  getEmployees(){
+    return this.http.get<Employee[]>('http://projectapi.gerasim.in/api/EmployeeManagement/GetAllEmployees');
   }
 }
 

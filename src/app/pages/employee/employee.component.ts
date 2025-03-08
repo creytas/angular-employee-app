@@ -1,6 +1,6 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { MasterService } from '../../services/master.service';
-import { IApiResponse, IDepartment } from '../../model/Employee';
+import { Employee, IApiResponse, IDepartment } from '../../model/Employee';
 
 @Component({
   selector: 'app-employee',
@@ -12,6 +12,10 @@ import { IApiResponse, IDepartment } from '../../model/Employee';
 export class EmployeeComponent implements OnInit {
   master = inject(MasterService);
   departments: IDepartment[] = [];
+  employees: Employee[] = [];
+  page = 1;
+  totalPages = 0;
+  pageSize = 10;
 
   getDepartmentsList() {
     this.master.getDepartments().subscribe((res: IApiResponse) => {
@@ -20,9 +24,23 @@ export class EmployeeComponent implements OnInit {
     });
   }
 
-  changePage(direction:string) {
-    console.log('Changing page to ' + direction);
+  getEmployeesList() {
+    this.master.getEmployees().subscribe((res: Employee[]) => {
+      console.log(res);
+      this.employees = res;
+      this.totalPages = Math.ceil(this.employees.length / this.pageSize);
+    })
   }
+
+  changePage(direction: string) {
+    if (direction === 'next' && this.page < this.totalPages) this.page++;
+    if (direction === 'prev' && this.page > 1) this.page--;
+    if (direction === 'first') this.page = 1;
+    if (direction === 'last') this.page = this.totalPages;
+
+    console.log(`Page changed to ${direction}. Current page: ${this.page}`);
+  }
+
 
   view() {
     console.log('Viewing employee details');
@@ -50,6 +68,7 @@ export class EmployeeComponent implements OnInit {
 
   ngOnInit(): void {
     console.log('Employee Component is ready');
+    this.getEmployeesList();
     this.getDepartmentsList();
   }
 }
