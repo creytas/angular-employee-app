@@ -1,1 +1,260 @@
-<p>employee works!</p>
+<div class="employee-container">
+  <div [ngClass]="isFormOpen ? 'form-table-container' : 'table-container'">
+    <h2 class="head-title"><div class="section-title"><i class="material-icons icon-title">badge</i><span>Employee List</span></div><div class="action-container"><button class="icon-button" [disabled]="isFormOpen" (click)="export()"><i class="material-icons icon-visitor">upload</i></button><button class="icon-button" [disabled]="isFormOpen" (click)="openCloseForm()"><i class="material-icons icon-admin">person_add</i></button></div></h2>
+    <div class="table-border">
+      <table class="table gb-table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Gender</th>
+            <th scope="col">Department</th>
+            <th scope="col">Role</th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="gb-is-hover">
+            <td>9103</td>
+            <td>
+              <div class="column">
+                <b class="text-nowrap">Randy BUHENDWA</b>
+                <small class="d-block">randy.buhendwa&#64;gmail.com</small>
+              </div>
+            </td>
+            <td>Male</td>
+            <td><span class="text-nowrap">Development</span></td>
+            <td>
+              <i class="material-icons icon-admin">admin_panel_settings</i>
+            </td>
+            <td class="action-container">
+              <button class="icon-button view" (click)="view()" [disabled]="isFormOpen"><i class="material-icons">visibility</i></button>
+              <button class="icon-button edit" (click)="edit()" [disabled]="isFormOpen"><i class="material-icons">edit</i></button>
+              <button class="icon-button delete" (click)="delete()" [disabled]="isFormOpen"><i class="material-icons">delete</i></button>
+            </td>
+          </tr>
+
+          <tr class="gb-is-hover">
+            <td>1461</td>
+            <td>
+              <div class="column">
+                <b class="text-nowrap">Ada LOVELACE</b>
+                <small class="d-block">ada.lovelace&#64;gmail.com</small>
+              </div>
+            </td>
+            <td>Female</td>
+            <td><span class="text-nowrap">Marketing & Communication</span></td>
+            <td>
+              <i class="material-icons icon-employee">badge</i>
+            </td>
+            <td class="action-container">
+              <button class="icon-button view" (click)="view()" [disabled]="isFormOpen"><i class="material-icons">visibility</i></button>
+              <button class="icon-button edit" (click)="edit()" [disabled]="isFormOpen"><i class="material-icons">edit</i></button>
+              <button class="icon-button delete" (click)="delete()" [disabled]="isFormOpen"><i class="material-icons">delete</i></button>
+            </td>
+          </tr>
+
+          <tr class="gb-is-hover">
+            <td>2083</td>
+            <td>
+              <div class="column">
+                <b class="text-nowrap">Jean-Michel MASIKINI</b>
+                <small class="d-block">jm.masikini&#64;gmail.com</small>
+              </div>
+            </td>
+            <td>Male</td>
+            <td><span class="text-nowrap">Finance & Accounting</span></td>
+            <td>
+              <i class="material-icons icon-visitor">person</i>
+            </td>
+            <td class="action-container">
+              <button class="icon-button view" (click)="view()" [disabled]="isFormOpen"><i class="material-icons">visibility</i></button>
+              <button class="icon-button edit" (click)="edit()" [disabled]="isFormOpen"><i class="material-icons">edit</i></button>
+              <button class="icon-button delete" (click)="delete()" [disabled]="isFormOpen"><i class="material-icons">delete</i></button>
+            </td>
+          </tr>
+
+          <tr class="gb-is-hover">
+            <td>7777</td>
+            <td>
+              <div class="column">
+                <b class="text-nowrap">Wendy ASSANA</b>
+                <small class="d-block">alicia.assana&#64;gmail.com</small>
+              </div>
+            </td>
+            <td>Female</td>
+            <td><span class="text-nowrap">Sales</span></td>
+            <td>
+              <i class="material-icons icon-employee">badge</i>
+            </td>
+            <td class="action-container">
+              <button class="icon-button view" (click)="view()" [disabled]="isFormOpen"><i class="material-icons">visibility</i></button>
+              <button class="icon-button edit" (click)="edit()" [disabled]="isFormOpen"><i class="material-icons">edit</i></button>
+              <button class="icon-button delete" (click)="delete()" [disabled]="isFormOpen"><i class="material-icons">delete</i></button>
+            </td>
+          </tr>
+
+          <tr class="gb-is-hover">
+            <td>0537</td>
+            <td>
+              <div class="column">
+                <b class="text-nowrap">Roxane YAGA</b>
+                <small class="d-block">roxy.yaga&#64;gmail.com</small>
+              </div>
+            </td>
+            <td>Female</td>
+            <td><span class="text-nowrap">Customer Service</span></td>
+            <td>
+              <i class="material-icons icon-admin">admin_panel_settings</i>
+            </td>
+            <td class="action-container">
+              <button class="icon-button view" (click)="view()" [disabled]="isFormOpen"><i class="material-icons">visibility</i></button>
+              <button class="icon-button edit" (click)="edit()" [disabled]="isFormOpen"><i class="material-icons">edit</i></button>
+              <button class="icon-button delete" (click)="delete()" [disabled]="isFormOpen"><i class="material-icons">delete</i></button>
+            </td>
+          </tr>
+
+          <tr class="gb-is-hover">
+            <td>3101</td>
+            <td>
+              <div class="column">
+                <b class="text-nowrap">Aristote IZIRI</b>
+                <small class="d-block">aristote.iziri&#64;gmail.com</small>
+              </div>
+            </td>
+            <td>Male</td>
+            <td><span class="text-nowrap">Data & Analytics</span></td>
+            <td>
+              <i class="material-icons icon-visitor">person</i>
+            </td>
+            <td class="action-container">
+              <button class="icon-button view" (click)="view()" [disabled]="isFormOpen"><i class="material-icons">visibility</i></button>
+              <button class="icon-button edit" (click)="edit()" [disabled]="isFormOpen"><i class="material-icons">edit</i></button>
+              <button class="icon-button delete" (click)="delete()" [disabled]="isFormOpen"><i class="material-icons">delete</i></button>
+            </td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="6">
+              <div class="table-footer">
+                <nav class="pagination">
+                  <button class="icon-button" (click)="changePage('first')" aria-label="Première page">
+                    <i class="material-icons">first_page</i>
+                  </button>
+                  <button class="icon-button" (click)="changePage('prev')" aria-label="Page précédente">
+                    <i class="material-icons">chevron_left</i>
+                  </button>
+                  <span class="page-info">
+                    Page <span id="current-page">{{page===0?1:page}}</span> - <span id="total-pages">{{totalPages<1?1:totalPages}}</span>
+                  </span>
+                  <button class="icon-button" (click)="changePage('next')" aria-label="Page suivante">
+                    <i class="material-icons">chevron_right</i>
+                  </button>
+                  <button class="icon-button" (click)="changePage('last')" aria-label="Dernière page">
+                    <i class="material-icons">last_page</i>
+                  </button>
+                </nav>
+
+                <div class="page-size">
+                  <label for="page-size">Rows per page :</label>
+                  <select id="page-size" onchange="updatePageSize(this.value)">
+                    <option value="10" selected>10</option>
+                    <option value="50">50</option>
+                    <option value="100">100</option>
+                  </select>
+                </div>
+
+                <div class="total-items">
+                  Total : <span id="total-items">{{employees.length}}</span> items
+                </div>
+              </div>
+            </td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+
+  <div class="form-container" *ngIf="isFormOpen">
+    <h2 class="head-title"><div class="section-title"><i class="material-icons icon-title">badge</i><span>Employee Registration</span></div><div class="action-container"><button class="icon-button" (click)="openCloseForm()"><i class="material-icons icon-visitor">close</i></button></div></h2>
+
+    <form (submit)="add()">
+      <!-- Employee Name -->
+      <div class="form-group input-group">
+        <span class="input-group-text"><i class="material-icons">person</i></span>
+        <input type="text" class="form-control" formControlName="employeeName" placeholder="Full Name">
+      </div>
+
+      <!-- Contact Number -->
+      <div class="form-group input-group">
+        <span class="input-group-text"><i class="material-icons">phone</i></span>
+        <input type="text" class="form-control" formControlName="contactNo" placeholder="Phone Number">
+      </div>
+
+      <!-- Email -->
+      <div class="form-group input-group">
+        <span class="input-group-text"><i class="material-icons">email</i></span>
+        <input type="email" class="form-control" formControlName="emailId" placeholder="Email">
+      </div>
+
+      <!-- Password -->
+      <div class="form-group input-group">
+        <span class="input-group-text"><i class="material-icons">lock</i></span>
+        <input type="password" class="form-control" formControlName="password" placeholder="Password">
+      </div>
+
+      <!-- Gender -->
+      <div class="form-group gender-group input-group">
+        <span class="input-group-text"><i class="material-icons">accessibility</i></span>
+        <select class="form-select" formControlName="gender">
+          <option value="" disabled>Select Gender</option>
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+        </select>
+      </div>
+
+      <!-- Department ID -->
+      <div class="form-group gender-group input-group">
+        <span class="input-group-text"><i class="material-icons">business</i></span>
+        <select class="form-select" formControlName="gender">
+          <option value="" disabled>Select Department</option>
+          <option *ngFor="let department of departments; let i = index" [value]="department.departmentId">{{ department.departmentName }}</option>
+
+          <!-- @for (department of departments; track $index) {
+            <option [value]="department.departmentId">{{department.departmentName}}</option>
+          } -->
+
+          <!-- <option value="DEV">Development</option>
+          <option value="QA"> Quality Assurance</option>
+          <option value="MANAGEMENT">Project & Product Management</option>
+          <option value="SECURITY">Security</option>
+          <option value="DATA">Data & Analytics</option>
+          <option value="CUSTOMER">Customer Service</option>
+          <option value="COM">Marketing & Communication</option>
+          <option value="SALES">Sales</option>
+          <option value="HR">Human Resources</option>
+          <option value="FIN">Finance & Accounting</option>
+          <option value="LEG">Legal</option> -->
+        </select>
+      </div>
+
+      <!-- Role -->
+      <div class="form-group gender-group input-group">
+        <span class="input-group-text"><i class="material-icons">badge</i></span>
+        <select class="form-select" formControlName="gender">
+          <option value="" disabled>Select Role</option>
+          <option value="Admin">Admin</option>
+          <option value="Employee">Employee</option>
+          <option value="Visitor">Visitor</option>
+        </select>
+      </div>
+
+      <!-- Submit Button -->
+      <button type="submit" class="submit-btn">
+        Submit
+      </button>
+    </form>
+  </div>
+</div>

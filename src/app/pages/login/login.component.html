@@ -1,1 +1,12 @@
-<p>login works!</p>
+<div class="vid-container">
+  <div class="inner-container">
+    <div class="box">
+      <span>
+        <i class="material-icons login-icon">account_circle</i>
+      </span>
+      <input type="text" placeholder="Username" [(ngModel)]="loginObj.username"/>
+      <input type="password" placeholder="Password" [(ngModel)]="loginObj.password"/>
+      <button (click)="onLogin()">Sign In</button>
+    </div>
+  </div>
+</div>

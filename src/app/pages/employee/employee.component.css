@@ -1,0 +1,345 @@
+.employee-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  height: 100%;
+  background-color: transparent;
+}
+
+.table-container {
+  width: 100%;
+  min-height: 90%;
+  margin: 0 auto;
+  padding: 25px;
+  background-color: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2), 0px 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.form-table-container {
+  width: 60%;
+  min-height: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 25px;
+  background-color: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2), 0px 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.form-container {
+  width: 35%;
+  min-height: 90%;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 25px;
+  background-color: #fff;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2), 0px 10px 25px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  position: relative;
+  background-color: #f1f1f1;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.input-group:focus-within {
+  border-color: #00bf72;
+  box-shadow: 0 0 5px rgba(0, 191, 114, 0.5);
+}
+
+/* STYLE GÉNÉRAL POUR LES CHAMPS (input et select) */
+.input-group {
+  position: relative;
+  background-color: #f1f1f1;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+/* Quand un champ (input/select) a le focus */
+.input-group:focus-within {
+  border-color: #00bf72;
+  box-shadow: 0 0 5px rgba(0, 191, 114, 0.5);
+}
+
+/* Style INPUT */
+.input-group input,
+.input-group select {
+  width: 100%;
+  padding: 10px 10px 10px 35px; /* Déplacer le texte à droite pour l'icône */
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  transition: 0.3s;
+  height: 40px;
+  box-sizing: border-box;
+}
+
+.input-group input:focus,
+.input-group select:focus {
+  outline: none;
+}
+
+/* Style spécifique pour SELECT dans gender-group */
+.gender-group .input-group select {
+  width: 100%; /* Assurer que le select prenne toute la largeur */
+  min-width: 378.4px; /* Largeur minimale pour s'assurer que le select ne devienne pas trop petit */
+  appearance: none; /* Supprimer l'apparence native du select */
+  background-color: white;
+  cursor: pointer;
+}
+
+/* Style pour l'icône dans le champ */
+.input-group-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px; /* Taille fixe pour l'icône */
+  height: 100%;
+  background-color: #f1f1f1;
+  border-right: 1px solid #ccc;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.input-group-text i {
+  font-size: 18px;
+  color: #333;
+}
+
+/* Pour faire de la place à l'icône dans l'input/select */
+.input-group input,
+.input-group select {
+  padding-left: 35px; /* Espace pour l'icône */
+}
+
+.submit-btn {
+  width: 100%;
+  margin-top: 20px;
+  padding: 12px;
+  background-color: #00bf72;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.submit-btn:hover {
+  background-color: #008f5a;
+}
+
+/* Style pour les icônes dans les champs */
+.input-group-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px; /* Taille fixe pour l'icône */
+  height: 100%;
+  background-color: #f1f1f1;
+  border-right: 1px solid #ccc;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.input-group-text i {
+  font-size: 18px;
+  color: #333;
+}
+
+.input-group select {
+  padding-left: 35px; /* Pour faire de la place à l'icône */
+}
+
+.input-group input:focus,
+.input-group select:focus {
+  outline: none;
+}
+
+.head-title{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.section-title{
+  display: flex;
+  align-items: center;
+}
+/* Style général de la table */
+.table-border{
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.gb-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  border-radius: 5px;
+  overflow: hidden;
+  border: 1px solid #ced4da
+}
+
+/* Style des en-têtes */
+.gb-table thead {
+  background-color: #f8f9fa;
+  font-weight: bold;
+  text-align: left;
+}
+
+.gb-table th {
+  padding: 6px 8px;
+  border-bottom: 2px solid #dee2e6;
+}
+
+/* Ajout des bordures horizontales uniquement */
+.gb-table tbody tr {
+  border-bottom: 1px solid #dee2e6;
+  transition: background-color 0.3s ease;
+}
+
+.gb-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+/* Style des cellules */
+.gb-table td {
+  padding: 6px 8px;
+  vertical-align: top;
+}
+
+/* Effet de survol */
+.gb-table tbody tr:hover {
+  background-color: #f1f3f5;
+}
+
+.column{
+  display: flex;
+  flex-direction: column;
+}
+
+tfoot {
+  background-color: #f8f9fa;
+  border-top: 2px solid #dee2e6;
+}
+
+.table-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.icon-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pagination>.icon-button i {
+  font-size: 20px;
+  color: #6c757d;
+}
+
+.pagination>.icon-button i:hover {
+  color:#00bf72;
+}
+
+.pagination>.icon-button:hover {
+  background-color: #e9ecef;
+}
+
+.page-size select {
+  padding: 4px;
+  border: none;
+  border-radius: 4px;
+  outline: none;
+  background-color: #f8f9fa;
+  cursor: pointer;
+}
+
+.total-items {
+  font-weight: 500;
+}
+
+.action-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4px;
+}
+
+.icon-admin {
+  color: #1565C0;
+  font-size: 30px;
+}
+
+.icon-employee {
+  color: #2E7D32;
+  font-size: 30px;
+}
+
+.icon-visitor {
+  color: #555;
+  font-size: 30px;
+}
+
+.icon-title {
+  font-size: 36px;
+  font-weight: bold;
+  color: #2E7D32;
+  margin-right: 2px;
+}
+
+.icon-button {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.icon-button.view {
+  color: #555;
+}
+
+.icon-button.edit {
+  color: #FF9800;
+}
+
+.icon-button.delete {
+  color: #F44336;
+}
+
+.icon-button:hover {
+  opacity: 0.8;
+}
