@@ -1,6 +1,6 @@
 <div class="employee-container">
   <div class="table-container">
-    <h2 class="head-title"><div class="section-title"><i class="material-icons icon-title">badge</i><span>Employee List</span></div><div class="action-container"><button class="icon-button" (click)="export()"><i class="material-icons icon-visitor">upload</i></button><button class="icon-button" (click)="add()"><i class="material-icons icon-admin">person_add</i></button></div></h2>
+    <h2 class="head-title"><div class="section-title"><i class="material-icons icon-title">badge</i><span>Employee List</span></div><div class="action-container"><button class="icon-button" [disabled]="isFormOpen" (click)="export()"><i class="material-icons icon-visitor">upload</i></button><button class="icon-button" [disabled]="isFormOpen" (click)="openCloseForm()"><i class="material-icons icon-admin">person_add</i></button></div></h2>
     <div class="table-border">
       <table class="table gb-table">
         <thead>
@@ -28,9 +28,9 @@
               <i class="material-icons icon-admin">admin_panel_settings</i>
             </td>
             <td class="action-container">
-              <button class="icon-button view" (click)="view()"><i class="material-icons">visibility</i></button>
-              <button class="icon-button edit" (click)="edit()"><i class="material-icons">edit</i></button>
-              <button class="icon-button delete" (click)="delete()"><i class="material-icons">delete</i></button>
+              <button class="icon-button view" (click)="view()" [disabled]="isFormOpen"><i class="material-icons">visibility</i></button>
+              <button class="icon-button edit" (click)="edit()" [disabled]="isFormOpen"><i class="material-icons">edit</i></button>
+              <button class="icon-button delete" (click)="delete()" [disabled]="isFormOpen"><i class="material-icons">delete</i></button>
             </td>
           </tr>
 
@@ -48,9 +48,9 @@
               <i class="material-icons icon-employee">badge</i>
             </td>
             <td class="action-container">
-              <button class="icon-button view" (click)="view()"><i class="material-icons">visibility</i></button>
-              <button class="icon-button edit" (click)="edit()"><i class="material-icons">edit</i></button>
-              <button class="icon-button delete" (click)="delete()"><i class="material-icons">delete</i></button>
+              <button class="icon-button view" (click)="view()" [disabled]="isFormOpen"><i class="material-icons">visibility</i></button>
+              <button class="icon-button edit" (click)="edit()" [disabled]="isFormOpen"><i class="material-icons">edit</i></button>
+              <button class="icon-button delete" (click)="delete()" [disabled]="isFormOpen"><i class="material-icons">delete</i></button>
             </td>
           </tr>
 
@@ -68,9 +68,9 @@
               <i class="material-icons icon-visitor">person</i>
             </td>
             <td class="action-container">
-              <button class="icon-button view" (click)="view()"><i class="material-icons">visibility</i></button>
-              <button class="icon-button edit" (click)="edit()"><i class="material-icons">edit</i></button>
-              <button class="icon-button delete" (click)="delete()"><i class="material-icons">delete</i></button>
+              <button class="icon-button view" (click)="view()" [disabled]="isFormOpen"><i class="material-icons">visibility</i></button>
+              <button class="icon-button edit" (click)="edit()" [disabled]="isFormOpen"><i class="material-icons">edit</i></button>
+              <button class="icon-button delete" (click)="delete()" [disabled]="isFormOpen"><i class="material-icons">delete</i></button>
             </td>
           </tr>
 
@@ -88,9 +88,9 @@
               <i class="material-icons icon-employee">badge</i>
             </td>
             <td class="action-container">
-              <button class="icon-button view" (click)="view()"><i class="material-icons">visibility</i></button>
-              <button class="icon-button edit" (click)="edit()"><i class="material-icons">edit</i></button>
-              <button class="icon-button delete" (click)="delete()"><i class="material-icons">delete</i></button>
+              <button class="icon-button view" (click)="view()" [disabled]="isFormOpen"><i class="material-icons">visibility</i></button>
+              <button class="icon-button edit" (click)="edit()" [disabled]="isFormOpen"><i class="material-icons">edit</i></button>
+              <button class="icon-button delete" (click)="delete()" [disabled]="isFormOpen"><i class="material-icons">delete</i></button>
             </td>
           </tr>
 
@@ -108,9 +108,9 @@
               <i class="material-icons icon-admin">admin_panel_settings</i>
             </td>
             <td class="action-container">
-              <button class="icon-button view" (click)="view()"><i class="material-icons">visibility</i></button>
-              <button class="icon-button edit" (click)="edit()"><i class="material-icons">edit</i></button>
-              <button class="icon-button delete" (click)="delete()"><i class="material-icons">delete</i></button>
+              <button class="icon-button view" (click)="view()" [disabled]="isFormOpen"><i class="material-icons">visibility</i></button>
+              <button class="icon-button edit" (click)="edit()" [disabled]="isFormOpen"><i class="material-icons">edit</i></button>
+              <button class="icon-button delete" (click)="delete()" [disabled]="isFormOpen"><i class="material-icons">delete</i></button>
             </td>
           </tr>
 
@@ -128,9 +128,9 @@
               <i class="material-icons icon-visitor">person</i>
             </td>
             <td class="action-container">
-              <button class="icon-button view" (click)="view()"><i class="material-icons">visibility</i></button>
-              <button class="icon-button edit" (click)="edit()"><i class="material-icons">edit</i></button>
-              <button class="icon-button delete" (click)="delete()"><i class="material-icons">delete</i></button>
+              <button class="icon-button view" (click)="view()" [disabled]="isFormOpen"><i class="material-icons">visibility</i></button>
+              <button class="icon-button edit" (click)="edit()" [disabled]="isFormOpen"><i class="material-icons">edit</i></button>
+              <button class="icon-button delete" (click)="delete()" [disabled]="isFormOpen"><i class="material-icons">delete</i></button>
             </td>
           </tr>
         </tbody>
@@ -146,7 +146,7 @@
                     <i class="material-icons">chevron_left</i>
                   </button>
                   <span class="page-info">
-                    Page <span id="current-page">{{page}}</span> - <span id="total-pages">{{totalPages}}</span>
+                    Page <span id="current-page">{{page===0?1:page}}</span> - <span id="total-pages">{{totalPages<1?1:totalPages}}</span>
                   </span>
                   <button class="icon-button" (click)="changePage('next')" aria-label="Page suivante">
                     <i class="material-icons">chevron_right</i>
@@ -157,7 +157,7 @@
                 </nav>
 
                 <div class="page-size">
-                  <label for="page-size">rows per page :</label>
+                  <label for="page-size">Rows per page :</label>
                   <select id="page-size" onchange="updatePageSize(this.value)">
                     <option value="10" selected>10</option>
                     <option value="50">50</option>
@@ -177,9 +177,9 @@
     </div>
   </div>
   <div class="form-container">
-    <h2 class="head-title"><div class="section-title"><i class="material-icons icon-title">badge</i><span>Employee Registration</span></div><div class="action-container"><button class="icon-button" (click)="close()"><i class="material-icons icon-visitor">close</i></button></div></h2>
+    <h2 class="head-title"><div class="section-title"><i class="material-icons icon-title">badge</i><span>Employee Registration</span></div><div class="action-container"><button class="icon-button" (click)="openCloseForm()"><i class="material-icons icon-visitor">close</i></button></div></h2>
 
-    <form>
+    <form (submit)="add()">
       <!-- Employee Name -->
       <div class="form-group input-group">
         <span class="input-group-text"><i class="material-icons">person</i></span>

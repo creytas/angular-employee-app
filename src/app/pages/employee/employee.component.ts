@@ -16,6 +16,8 @@ export class EmployeeComponent implements OnInit {
   page = 1;
   totalPages = 0;
   pageSize = 10;
+  isFormOpen:boolean = false
+
 
   getDepartmentsList() {
     this.master.getDepartments().subscribe((res: IApiResponse) => {
@@ -54,8 +56,9 @@ export class EmployeeComponent implements OnInit {
     console.log('Deleting employee details');
   }
 
-  close() {
-    console.log('Closing the employee registration page');
+  openCloseForm() {
+    this.isFormOpen=!this.isFormOpen;
+    console.log(`${this.isFormOpen===true?'Opening':'Closing'} the employee registration page - status: ${this.isFormOpen}`);
   }
 
   add() {
