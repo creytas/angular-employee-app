@@ -18,17 +18,17 @@
 
     <div class="navigation">
       <ul>
-        <li>
+        <li routerLink="/dashboard" [class.active]="isActive === 'dashboard'" (click)="setActive('dashboard')">
           <i class="material-icons">store</i>
-          <a routerLink="/dashboard">Home</a>
+          <a>Home</a>
         </li>
         <li>
           <i class="material-icons">track_changes</i>
           <a>Explore</a>
         </li>
-        <li>
+        <li routerLink="/employee" [class.active]="isActive === 'employee'" (click)="setActive('employee')">
           <i class="material-icons">badge</i>
-          <a routerLink="/employee">Employee</a>
+          <a>Employee</a>
         </li>
         <li>
           <i class="material-icons">forum</i>
@@ -44,9 +44,9 @@
           <i class="material-icons">settings</i>
           <a>Settings</a>
         </li>
-        <li class="user-profile">
+        <li>
           <i class="material-icons">account_circle</i>
-          <a>{{user.employeeName}}</a>
+          <a>{{user.employeeName?user.employeeName:'Randy BUHENDWA'}}</a>
         </li>
         <li class="logout" (click)="onLogout()">
           <i class="material-icons">logout</i>

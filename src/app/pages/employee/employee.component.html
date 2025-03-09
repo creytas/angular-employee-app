@@ -1,5 +1,5 @@
 <div class="employee-container">
-  <div class="table-container">
+  <div [ngClass]="isFormOpen ? 'form-table-container' : 'table-container'">
     <h2 class="head-title"><div class="section-title"><i class="material-icons icon-title">badge</i><span>Employee List</span></div><div class="action-container"><button class="icon-button" [disabled]="isFormOpen" (click)="export()"><i class="material-icons icon-visitor">upload</i></button><button class="icon-button" [disabled]="isFormOpen" (click)="openCloseForm()"><i class="material-icons icon-admin">person_add</i></button></div></h2>
     <div class="table-border">
       <table class="table gb-table">
