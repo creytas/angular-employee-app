@@ -176,7 +176,8 @@
       </table>
     </div>
   </div>
-  <div class="form-container">
+
+  <div class="form-container" *ngIf="isFormOpen">
     <h2 class="head-title"><div class="section-title"><i class="material-icons icon-title">badge</i><span>Employee Registration</span></div><div class="action-container"><button class="icon-button" (click)="openCloseForm()"><i class="material-icons icon-visitor">close</i></button></div></h2>
 
     <form (submit)="add()">
@@ -219,9 +220,12 @@
         <span class="input-group-text"><i class="material-icons">business</i></span>
         <select class="form-select" formControlName="gender">
           <option value="" disabled>Select Department</option>
-          @for (department of departments; track $index) {
+          <option *ngFor="let department of departments; let i = index" [value]="department.departmentId">{{ department.departmentName }}</option>
+
+          <!-- @for (department of departments; track $index) {
             <option [value]="department.departmentId">{{department.departmentName}}</option>
-          }
+          } -->
+
           <!-- <option value="DEV">Development</option>
           <option value="QA"> Quality Assurance</option>
           <option value="MANAGEMENT">Project & Product Management</option>
